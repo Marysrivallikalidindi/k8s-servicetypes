@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: svc-podjenkin
+  labels:
+    app: test
+spec:
+  containers:
+    - name: testco-jenkins
+      image: jenkins/jenkins:lts
+      ports:
+        - containerPort: 80
+          protocol: TCP
