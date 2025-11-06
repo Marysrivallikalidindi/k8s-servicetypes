@@ -9,5 +9,5 @@ spec:
   containers:
     - name: my-con1
       image: nginx:latest
-      port:
-       - containerPort: 80
+      ports:
+        - containerPort: 80
