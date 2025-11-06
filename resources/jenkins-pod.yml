@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: resource-pod
+  name: jenkins-pod
   labels:
-    app: resource-test
+    app: resourcejenkins-test
 spec:
   containers:
-   - name: myresource-con1
+   - name: myresource-jenkinscon1
      image: jenkins/jenkins:latest
      ports:
       - containerPort: 80
