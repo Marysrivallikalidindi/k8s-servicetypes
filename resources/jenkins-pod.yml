@@ -18,5 +18,5 @@ spec:
       memory: 256Mi
       cpu: 500m
   securityContext:
-    runASUser: 0
+    runAsUser: 0
   restartPolicy: Always
