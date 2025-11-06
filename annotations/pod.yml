@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annotation-pod
+  labels:
+    app: test
+  annotations:
+    myecr: 639261426572.dkr.ecr.ap-south-1.amazonaws.com/pod-anno
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+spec:
+  containers:
+    - name : my-con1
+      image: nginx:latest
+      ports:
+        -containerPort: 80
+   
