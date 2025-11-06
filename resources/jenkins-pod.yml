@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resource-pod
+  labels:
+    app: resource-test
+spec:
+  containers:
+   - name: myresource-con1
+     image: jenkins/jenkins:latest
+     ports:
+      - containerPort: 80
+  resources:
+    requests:
+      memory: 128Mi
+      cpu: 250m
+    limits:
+      memory: 256Mi
+      cpu: 500m
+  securityContext:
+    runASUser: 0
+  restartPolicy: Always
