@@ -4,7 +4,7 @@ metadata:
   name: namespace-pod
   labels:
     app: ns-test
-    namespace: prod
+  namespace: prod
 spec:
   containers:
     - name: my-con1
