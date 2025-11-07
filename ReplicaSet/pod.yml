@@ -11,14 +11,14 @@ spec:
   selector:
     matchLabels:
       app: dev
-  template:
-    metadata:
-      name: my-pod
-      labels:
-        app: dev
-    spec:
-      containers:
-      -  name: myreplica-con
-         image: nginx:1.29
-         ports:
-           -containerPort: 80
+template:
+  metadata:
+    name: my-pod
+    labels:
+      app: dev
+  spec:
+    containers:
+    - name: myreplica-con
+      image: nginx:1.29
+      ports:
+        -containerPort: 80
