@@ -25,7 +25,7 @@ spec:
         - name : myjava-container
           image: mary511/javaproimage:javadevenv
           ports:
-            -containerPort: 8080
+            - containerPort: 8080
           livenessProbe:
             tcpSocket:
               port: 80
