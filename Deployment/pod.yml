@@ -19,7 +19,7 @@ spec:
   template:
     metadata:
       labels:
-        app: javaapp
+        app: javapods
     spec:
       containers:
         - name: myjava-container
