@@ -19,7 +19,7 @@ spec:
   template:
     metadata:
       labels:
-        app: javapods
+        app: javaapp
     spec:
       containers:
         - name: myjava-container
@@ -36,5 +36,5 @@ spec:
             limits:
               cpu: 250m
               memory: 128Mi
-    restartPolicy: Always
+      restartPolicy: Always
           
