@@ -28,8 +28,3 @@ spec:
           image: {{ .Values.myimage }}
           ports:
             - containerPort: 80
-          
-          
-            
-            
-
