@@ -1,5 +1,6 @@
 myimage: longflew/ingress:BLUEPAGE
-con: mycondp
+
+con: mycon
+
 strategy:
-  dptype: RollingUpdate
-  
+    type: RollingUpdate

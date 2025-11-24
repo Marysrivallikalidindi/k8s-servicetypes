@@ -3,9 +3,9 @@ kind: Service
 metadata: 
   name: my-svc 
   namespace: prod
-  spec: 
-    type: LoadBalancer
-    selector:
-      app: myapp
-    ports:
-     - port: 80
+spec: 
+  type: LoadBalancer
+  selector:
+    app: myapp
+  ports:
+    - port: 80

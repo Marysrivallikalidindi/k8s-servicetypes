@@ -1,32 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: 
   name: mydp
   namespace: prod
   annotations:
-    kubernetes.io/change-cause: "this is my first version pods"
-spec:
-   min minReadySeconds: 5
-   replicas: 4
-   selector:
+    kubernetes.io/change-cause: "this is my first version"
+  labels: 
+    app: game
+spec: 
+  minReadySeconds: 5
+  replicas: 4
+  selector: 
     matchLabels:
       app: myapp
-   strategy:
-      type: {{ .Valueshelm.strategy.dptype}} 
-      rollingUpdate:
-        maxSurge: 25%
-        maxUnavailable: 25%
-   template:
-     metadata:
-       name: mydp
-       labels:
-         app: myapp
-     spec:
+  strategy:
+    type: {{ .Values.strategy.type }}
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template: 
+    metadata:  
+      labels:
+        app: myapp
+    spec:
       containers:
-        name: mycondp
-        image: {{ .Valueshelm.myimage}}
-        ports:
-         - containerPort: 80
-    
-
+        - name: {{ .Values.con }}
+          image: {{ .Values.myimage }}
+          ports:
+            - containerPort: 80
+          
+          
+            
+            
 
