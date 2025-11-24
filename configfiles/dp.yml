@@ -28,7 +28,7 @@ spec:
             - name: myconfig
               mountPath: /usr/share/nginx/html
           ports:
-            containerPort: 80
+           - containerPort: 80
       volumes:
         - name: myconfig
           configMap:
